@@ -5,3 +5,5 @@ body.f3 {background-color:rgb(51, 102, 126);}
 h1.v1 {color:rgb(61, 34, 214);text-shadow: 2px 2px 5px rgba(51, 19, 190, 0.842);}
 h1.v2 {color:rgb(192, 38, 166);}
 h1.v3 {color:rgb(59, 182, 176);}
+
+p {font-size: 100%}
