@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimryCode</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+    font-family: "Verdana";
+    font-size: 30px;
+}
+		</style>
+	</head>
+	<body>
+
+		<script>
+var x, y, darbiba, r;
+x = Number(prompt("Ievadiet pirmo skaitli"));
+y = Number(prompt("Ievadiet otro skaitli"));
+darbiba = prompt("Ievadiet darbību");
+switch (darbiba) {
+    case "+":
+        r = x + y;
+        break;
+    case "-":
+        r = x - y;
+        break;
+     case "*":
+        r = x * y;
+        break;
+    case "/":
+        r = x / y;
+        break;
+    default:
+        r = "Kļūdaini norādīta darbība";
+}
+document.write(r);
+		</script>
+	</body>
+</html>

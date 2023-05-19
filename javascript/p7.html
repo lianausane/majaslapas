@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimryCode</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+    font-family: "Verdana";
+    font-size: 14px;
+}
+		</style>
+	</head>
+	<body>
+<h2>Zīmēšana</h2> 
+<canvas id="pamatne"
+    width="200"
+    height="200"
+    style="border:1px solid black; background-color: LightGray">
+</canvas>
+<br>
+Līnijas krāsa: <input type="color" id="krasa" value="#0000FF"><br>
+Aizpildījuma krāsa: <input type="color" id="krasa2" value="#00FF00"><br>
+Rādiuss: <input type="text" id="radiuss" value="80"><br>
+Vai zīmēt aizpildītu? <input type="checkbox" id="aizkrasots"><br>
+<button type="button" onclick="poga()">Zīmēt</button>
+		<script>
+function poga(){
+  	var pam=document.getElementById("pamatne");
+	var zim= pam.getContext("2d");
+  // dzēš iepriekš uzzīmēto
+  	zim.beginPath();
+  	zim.clearRect(0,0,pam.width,pam.height);
+  	zim.stroke();
+  // vērtību nolasīšana no izvēlēm
+  	var r=radiuss.value;
+	var p=aizkrasots.checked;
+  	var k=krasa.value;
+  	var k2=krasa2.value;
+  
+    if (r>96){
+  		r=96;
+      radiuss.value=r;
+  	} 
+  
+  	zim.beginPath();
+  	zim.strokeStyle=k;
+  	zim.lineWidth="5";
+  
+  if(p){
+  	// aizkraasots
+    zim.fillStyle = k2;
+  	} else {
+  	// neaizkraasots
+    zim.fillStyle = "LightGray";
+  	}
+ 	
+	zim.arc(100,100,r,0,2*Math.PI);
+ 	zim.fill();
+  zim.stroke();
+}
+		</script>
+	</body>
+</html>
+

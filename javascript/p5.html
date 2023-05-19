@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimryCode</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+    font-family: "Verdana";
+    font-size: 20px;
+    text-align: center;
+}
+		</style>
+	</head>
+	<body>
+<h2>Krāsas</h2> 
+<p>Izvēlies krāsu: <input type="color" id="krasa"></p>
+<p> <button onclick="poga()">Izpildīt</button> </p>
+<b><p id="teksts">Mana mīļākā krāsa.</p></b>
+		<script>
+function poga (){
+    var x = krasa.value;
+    teksts.style.color = x;
+}
+		</script>
+	</body>
+</html>

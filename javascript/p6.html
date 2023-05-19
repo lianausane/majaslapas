@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimryCode</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+    font-family: "Verdana";
+  	font-size: 20px;
+}
+
+		</style>
+	</head>
+	<body>
+<h2>Ceļojuma plānošana</h2> 
+<p> <button onclick="poga2()">Izmērs 14</button> </p> 
+<p>Ierakstiet vēlamo rakstzīmju lielumu: <input type="text" id="lielums"></p>
+<p id="tek">Ceļojumu plānošanu var iedalīt divos lielos virzienos:<br>
+- rūpīgi saplānot;<br>
+- "aizbraukšu, tad redzēšu, ko darīt".</p>
+
+<p><img src="http://clipart-library.com//2018/alice-in-wonderland-clip-art-7.png" 
+        alt="bilde" style="width:250px;height:150px;"></p>
+
+<p> <button onclick="poga()">Izpildīt</button> </p>
+
+<p id="izvads"></p>
+ 
+<!--
+http://clipart-library.com/data_images/388042.png
+-->
+		<script>
+function poga (){
+  var x=lielums.value;  	
+ 
+  if(isNaN(x)){
+    x="Nav ievadīts skaitlis!";
+    izvads.innerHTML=x;
+    } else {
+      tek.style.fontSize = x+"px";
+      izvads.innerHTML="";
+    }   
+}
+
+function poga2(){
+	tek.style.fontSize = "14px";
+  	lielums.value="";
+	}
+		</script>
+	</body>
+</html>
+
+

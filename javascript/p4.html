@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SimryCode</title>
+		<meta charset="utf8"/>
+		<style>
+body {
+    font-family: "Verdana";
+    font-size: 20px;
+    text-align: center;
+    background-color: #33b9ab;
+}
+		</style>
+	</head>
+	<body>
+<h2>Izvēles rūtiņa</h2>
+<p>Aizkrāsot: <input type="checkbox" id="izvele"></p>
+<p> <button onclick="poga()">Izpildīt</button> </p>
+<p id = "info"></p>
+		<script>
+var x=0;
+var a=0;
+function poga (){
+	x = izvele.checked;
+  	if(x){
+       a = "Ir ieķeksēts";
+       } else {
+       a = "Nav ieķeksēts";
+       }
+  	document.getElementById("info").innerHTML = a;
+}
+		</script>
+	</body>
+</html>
+
